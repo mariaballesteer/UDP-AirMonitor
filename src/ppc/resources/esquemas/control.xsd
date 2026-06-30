@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Esquema del mensaje de control (unicast). La misma estructura sirve para la
+  peticion del cliente y para la respuesta del servidor gracias al campo 'respuesta'.
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="control">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="idCliente"  type="xs:string"/>
+                <xs:element name="idServidor" type="xs:string"/>
+                <xs:element name="tipo"       type="tTipoControl"/>
+                <xs:element name="variable"   type="xs:string" minOccurs="0"/>
+                <xs:element name="valor"      type="xs:string" minOccurs="0"/>
+                <xs:element name="respuesta"  type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="tTipoControl">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="CAMBIO_CODIFICACION"/>
+            <xs:enumeration value="CAMBIO_FRECUENCIA"/>
+            <xs:enumeration value="CAMBIO_UNIDADES"/>
+            <xs:enumeration value="ACTIVAR_DESACTIVAR"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Esquema del mensaje de distribucion (broadcast).
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="distribucion">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="idServidor" type="xs:string"/>
+                <xs:element name="marcaTiempo" type="xs:long"/>
+                <xs:element name="variables">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="variable" type="tVariable"
+                                        minOccurs="3" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="tVariable">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="valor"  type="xs:double"/>
+            <xs:element name="unidad" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

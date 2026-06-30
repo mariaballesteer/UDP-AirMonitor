@@ -1,0 +1,28 @@
+# Maven
+target/
+
+# Eclipse
+.classpath
+.project
+.settings/
+.metadata/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Visual Studio Code
+.vscode/
+
+# Logs generados durante la ejecución
+logs/
+
+# Archivos de log
+*.log
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Vídeo de la documentación
+doc/Practica2_PPC.mp4
