@@ -118,9 +118,3 @@ Este proyecto permitió poner en práctica conceptos relacionados con:
 - Arquitectura cliente-servidor.
 - Serialización de datos.
 - Diseño de aplicaciones distribuidas.
-
----
-
-## Licencia
-
-Este proyecto ha sido desarrollado con fines académicos como práctica universitaria.
